@@ -1,0 +1,181 @@
+/* --- 1. Global Reset & Base Styles --- */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* --- 2. Header & Navigation Bar --- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #121212;
+}
+
+.Container {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(31, 29, 29);
+    width: 100%;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo {
+    color: rgb(20, 137, 247);
+}
+
+.navmain {
+    list-style: none;
+    display: flex;
+}
+
+.nav {
+    margin-left: 20px;
+}
+
+.nav a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+/* Navbar Links Hover Animation */
+.nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: rgb(20, 137, 247);
+    transition: width 0.3s ease-in-out;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* Contact Button in Navbar */
+.contact-btn {
+    border: 2px solid rgb(20, 137, 247);
+    color: rgb(20, 137, 247);
+    padding: 8px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-left: 20px;
+}
+
+.contact-btn:hover {
+    background-color: rgb(20, 137, 247); 
+    color: white; 
+    box-shadow: 0 0 10px rgb(20, 137, 247); 
+}
+
+/* --- 3. Hero Section (Home) --- */
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.highlight {
+    color: rgb(20, 137, 247);
+    text-align: center;
+}
+
+/* Hire Me / Hero Button */
+.hero-btn {
+    margin-top: 20px;
+    display: inline-block;
+    border: 2px solid rgb(20, 137, 247);
+    color: rgb(20, 137, 247); 
+    padding: 10px 25px; 
+    border-radius: 25px; 
+    text-decoration: none;  
+    transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+    background-color: rgb(20, 137, 247); 
+    color: white;
+    box-shadow: 0 0 15px rgb(20, 137, 247);
+}
+
+/* --- 4. About Me Section --- */
+.about-section {
+    padding: 100px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-section p {
+    background-color: rgba(20, 137, 247, 0.05);
+    border: 1px solid rgb(20, 137, 247);
+    padding: 40px;
+    border-radius: 20px;
+    line-height: 1.8;
+    box-shadow: 0 0 20px rgba(20, 137, 247, 0.15);
+    text-align: center; 
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+/* --- 5. Skills Section --- */
+#skills {
+    padding: 50px;
+    color: white;
+}
+
+#skills h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+.skills-container {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+.card1{
+    background-color: #1a1a1a;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid rgb(20, 137, 247);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card1 ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.card1 li {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+    color: #cccccc;
+}
+
+.card1 li::before {
+    content: "▹ ";
+    color: rgb(20, 137, 247);
+    font-weight: bold;
+}
